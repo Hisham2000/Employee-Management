@@ -4,8 +4,8 @@ import { User } from './user.entity';
 
 @Entity()
 export class Attendance {
-    @PrimaryGeneratedColumn() id:string;
-
+    @PrimaryGeneratedColumn()
+    id: number;
 
     @Column({ type: 'date' })
     day: Date;

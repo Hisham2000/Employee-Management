@@ -8,6 +8,7 @@ import {
 import { Role } from './role.entity';
 import { Exclude } from 'class-transformer';
 import { Attendance } from './attendance.entity';
+import { Requests } from './requests.entity';
 
 @Entity({ name: 'users' })
 export class User {
@@ -36,4 +37,7 @@ export class User {
 
   @OneToMany(() => Attendance, attendance => attendance.user)
   attendances: Attendance[];
+
+  @OneToMany(() => Requests, requests => requests.user)
+  requests: Requests[];
 }
